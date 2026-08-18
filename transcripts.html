@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Transcripts — PB Trading — First Payout</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--panel:#f8fafc;--bg:#eef0f3;
+ --accent:#4f46e5;--good:#059669;--warn:#ea580c;--bad:#9f1239}
+@media(prefers-color-scheme:dark){:root{--ink:#e8eaed;--muted:#9aa3b2;--line:#2a3140;
+ --panel:#151a23;--bg:#0d1117;--accent:#818cf8}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+ -webkit-font-smoothing:antialiased;line-height:1.55}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.top{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topin{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:60px}
+.brand{font-size:15px;font-weight:600;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:400}
+nav.main{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap;
+ padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{color:var(--ink)}
+nav.main a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.hero{padding:48px 0 26px}
+.kick{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.hero h1{font-size:40px;margin-bottom:14px;line-height:1.15}
+.hero p{font-size:17px;color:var(--muted);max-width:820px}
+section{padding:26px 0}
+h2.sec{font-size:22px;margin-bottom:16px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{font-size:15px;margin-bottom:7px}
+.card p{font-size:14px;color:var(--muted)}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat .n{font-size:26px;font-weight:600;letter-spacing:-.03em}
+.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;
+ border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.good{color:var(--good);border-color:var(--good)}
+.tag.warn{color:var(--warn);border-color:var(--warn)}
+.tag.bad{color:var(--bad);border-color:var(--bad)}
+figure{background:var(--panel);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+figure img{width:100%;display:block;background:#000;cursor:zoom-in}
+figcaption{padding:8px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+figcaption b{color:var(--ink);font-weight:600}
+details{background:var(--panel);border:1px solid var(--line);border-radius:9px;margin-bottom:9px}
+summary{padding:12px 15px;cursor:pointer;font-size:14px;font-weight:500;list-style:none;
+ display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .meta{font-size:12px;color:var(--muted);font-weight:400;white-space:nowrap}
+details .body{padding:0 15px 15px;font-size:14.5px;line-height:1.72;color:var(--ink)}
+details .body p{margin-bottom:12px}
+.ts{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;font-size:12.5px}
+.searchbar{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:9px;
+ background:var(--panel);color:var(--ink);font-size:14.5px;margin-bottom:14px;font-family:inherit}
+.note{border-left:3px solid var(--accent);padding:11px 15px;background:var(--panel);
+ border-radius:0 9px 9px 0;font-size:14px;margin-bottom:13px}
+.note.warn{border-left-color:var(--warn)}
+footer{padding:36px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:34px}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.93);display:none;align-items:center;
+ justify-content:center;z-index:99;cursor:zoom-out;padding:20px}
+#lb img{max-width:100%;max-height:92vh;object-fit:contain}
+#lb .cap{position:fixed;bottom:14px;left:0;right:0;text-align:center;color:#cbd5e1;font-size:13px;padding:0 20px}
+</style></head><body>
+<header class="top"><div class="topin">
+<div class="brand">PB Trading <span>swipe</span></div>
+<nav class="main"><a href="index.html" class="">Overview</a><a href="analysis.html" class="">Analysis</a><a href="transcripts.html" class="on">Transcripts</a><a href="videos.html" class="">Video library</a></nav></div></header>
+<div class="wrap">
+<div class="hero"><div class="kick">Verbatim</div><h1>Transcripts</h1>
+<p>Every word, timestamped. Search filters across all of them at once.</p></div>
+<section><input id="tsearch" class="searchbar" placeholder="Search every transcript…">
+<h2 class="sec">PB Trading VSL</h2><details class="tr"><summary>PB Trading — VSL<span class="meta">00:10:35 · 2,378 words</span></summary><div class="body"><p><span class="ts">[00:00:00]</span> still remember coming home from work just two years ago sweat stains in my stiff corporate suit dreading another day sitting at that desk staring at that same computer staring at the clock with my energy drained looking around seeing all these non ambitious people knowing that I was nothing like them I mean I always knew I was meant for more I remember showing my parents the trading results that I was seeing and telling them look mom dad I have a profitable system I&#x27;m making money with this why am I working this job and I mean naturally they looked at me and they said day trading isn&#x27;t gonna work everybody fails at it you need to keep focusing on college get your degree find a good job which sure if I was an average person might be the route that I wanted to take but I was fucking delusional I was crazy fast forward today I quit my job and ended up making over five hundred seventy thousand dollars in payouts with pro firms and learning how to trade for my best friend Blake allowing me to have real financial time and locational freedom my own friends and family laughed at me too they thought day trading was a scam and they always told me I should stick to my job working at carrot Express making smoothies all day now to this day I still remember that feeling I had when I checked my phone and I saw five thousand dollars worth of blown funded accounts I remember looking at myself in the mirror I was standing there frozen for what genuinely felt like ours I remember my palms were sweating my hands were shaky and I just had this horrible feeling and looking at myself in the mirror that day I made a decision if 1% of traders are profitable and 1% of traders earn consistent payouts and if that was possible then I could turn profitable too I mean I remember seeing traders they will be earning ten thousand dollars in a single trade and they weren&#x27;t superhuman they weren&#x27;t really any different from me and over the next year I went to earn one hundred seven thousand eight hundred and one dollars by the age of 18 years old allowing me to hang up my apron at carrot Express and saying goodbye to my boss and now</p><p><span class="ts">[00:01:41]</span> that we&#x27;re both earning consistent five to six figures a month with trading and average about a 70% win rate we&#x27;ve realized that all you need is a simple two-step formula to become profitable this is the exact formula that hundreds of our students followed to turn consistently profitable and earn over three million dollars in collective payouts and our models works so well it&#x27;s helped at least seven traders pass their first funded account every single week consistently for 400 days straight and it&#x27;s helped students like Bala earning over $40,000 in payouts earning a doctor&#x27;s salary as a regular teenager buying his dream car a BMW m4 comp and going on to teach hundreds of other people as well and not only that we&#x27;ve helped students like trim earning over a hundred and forty seven thousand dollars in payouts in one month he actually was on the top step leaderboard to making him achieve that type of financial freedom where you can just swipe your card without giving a second thought and our models is helping hundreds of people like Jay - he loan jig Chad and way more turn profitable and they&#x27;re doing all the cool stuff that Blake and I do going on crazy ski trips visiting foreign countries hopping on planes whenever they want to go travel supporting their family and friends and all this while making thousands of dollars every single day we&#x27;ve helped countless people quit their dreadful jobs and finally achieve the dream life that they&#x27;ve always talked about that nobody believed that they could do and prove all their friends and family wrong and just like Blake and I am probably like you they were experiencing the same doubt from everyone around them and look if you&#x27;re watching this video right now you&#x27;ve probably been trying to learn training for the past couple of months maybe even paper trading joining signal rooms or you&#x27;ve been trading for a year or longer and you&#x27;ve been strategy hopping even constantly blowing funded accounts and just overall getting your capital drained you&#x27;ve also probably fallen victim to</p><p><span class="ts">[00:03:25]</span> fake gurus who sold you a mentorship but instead delivered you a surface level course with basic information you can probably find anywhere on YouTube and no real one-on-one mentoring with actual accountability and listen we&#x27;ve been there too we know what it feels like to want that profitability so bad that burning desire and we know that feeling of wondering if trading is even real if there is even a light at the end of that tunnel and it&#x27;s time for you to have that same epiphany that I had when I looked at myself in the mirror and I saw the $5,000 worth of funded accounts that I&#x27;ve blown if 1% of traders are profitable then trading is real if regular college kids are turning profitable so can you so let me ask you this why are you different than anyone else and here&#x27;s a sad truth 60% of traders quit after their first month the paradox is that if you extend your time horizon you&#x27;ll actually turn profitable quicker most traders try to get rich quick forcing them to make rushed and emotional trades causing a vicious cycle of blown accounts and pure shame but maybe if you have a side income to back yourself up and you focus on sticking with one strategy and turning profitable over the course of the next year and not just one week and finally achieving the financial freedom that you&#x27;ve wanted this brings us back to the symbol two-step formula that we mentioned in the beginning of this video the two ingredients for the recipe of consistently profitability are one following a proven model with a consistent win rate like our PDI and mechanical models that average the 71% win rate over the past year and two dialing in your psychology and learning from mentors who are profitable themselves as well as having real one-on-one coaching and accountability from the people around you as I told you this is critical because without the guidance from someone who&#x27;s gotten to the place that you want to get to you&#x27;ll simply be left in no man&#x27;s land figuring out if what you&#x27;re doing is getting you closer to the goals that you dream of never knowing that if all the time effort and money that you&#x27;re putting</p><p><span class="ts">[00:05:08]</span> into yourself is simply going to waste and bringing you further from those goals and after inventing this two-step formula that allowed traders to turn profitable within six to twelve months and helping hundreds of traders earn their first payout we decided to start building something we call it the 1% over the past year of building it it&#x27;s finally been completed it is completely designed to be the last mentorship that you will ever need you may be wondering how can you even back up a claim like this because we&#x27;re quite literally a rehab center for other mentorships in the 1% we don&#x27;t just give you surface level information that you can find on YouTube for free or just give you access to a boring ass discord community where you&#x27;re just left to figure it out alone we go in depth with our PDI model our mechanical model even our discretionary and continuation model which we use nearly every single day and has generated millions of dollars in collective payouts amongst all our students in the last 12 months and this is a number that&#x27;s increasing in payouts every single day and trading is a language and we teach you how to understand speak express and feel this language in a way that is so simple and effective that you&#x27;re no longer guessing when you should click by yourself you&#x27;re following your rules and you&#x27;re trading with certainty not letting your emotions get in the way and preventing you from mindlessly blowing accounts and revenge trading but after mastering this first step of the formula you will need to learn the second step which is psychology that&#x27;s why right when you join you get a one-on-one onboarding call it with Ronan our head of client success and he was one of our best students who used to be exactly like you he was working a job he hated he was blowing funded account after funded account and he just further the life of him couldn&#x27;t stick to his rules but now these turn consistently profitable earning high five figures and payouts every single month consistently he decided he wanted to give back to the community during your one-on-one onboarding call with Ronan he&#x27;ll come</p><p><span class="ts">[00:06:48]</span> up with an exact plan to help you overcome your psychological roadblocks and he&#x27;ll work with us to map out a personalized trading plan for you so you know exactly what steps you need to take to become consistently profitable and after your one-on-one onboarding call you&#x27;ll get personally assigned an accountability partner who&#x27;s on the exact same journey as you that way you&#x27;ll grow together and never be left alone just how blip was there for me every single step of my way towards profitability because we know how lonely of a journey trading can be especially with your own friends and family doubting you and throughout this process you&#x27;ll also get access to weekly trade reviews to make sure you&#x27;re learning and applying all the things that we are teaching not only that inside of the 1% you&#x27;re gonna get access to weekly Q&amp;A calls with Patrick and I to make sure that none of your questions go unanswered which will completely speed up that process towards profitability this whole experience is designed to be a 90-day transformation where we get you in and you get the hell out think of it like graduating school a 90-day transformation where you come out the other side with the exact psychology that you need to be a successful trader with the exact technicals that you need to understand the charts and achieve time location and financial freedom once you graduate you&#x27;ll have mastery over a reliable trading strategy with a consistent win rate bulletproof psychology to prevent you from emotional trading and strategy hopping and potential lifelong friends where you&#x27;ll meet along the way throughout your journey in this community I want you to take a second for yourself and just imagine what your life could be like after joining the 1% and I&#x27;m sure you&#x27;ve already envisioned before what that dream life could be take a small moment for yourself and feel it what would this allow you to do the feeling of having a reliable model and no longer needing to search the entire internet or joining 50 different communities or asking hundreds of different people if they truly have the best strategy the feeling of having an unbreakable psychology never even questioning</p><p><span class="ts">[00:08:30]</span> whether or not you should break your rules because it is engraved into your system feeling of having real friends on the same path as you with strong ambitions who are just as delusional and crazy as you are and this is the real freedom you will have as a trader the same freedom that Patrick and I and hundreds of our students have been living over the last couple of years if you are ready to change your life go down below this video click the button and apply to join our one-on-one mentorship and we&#x27;ll see you inside and if you&#x27;re still hesitant to join the 1% and you want us to sweeten the pot a little bit more then we&#x27;ll toss you in year-long access to daily live trades with us and showing you how we handle wins losses in the true reality of day trading and pay for daily live trades with us would normally cost $1,200 we&#x27;ll bundle it into the mentorship as a free bonus so again if you&#x27;re ready to change your life and finally become a profitable trader this year go down below this video and fill out an application to speak with our team and see if you&#x27;re a good fit to work with us inside our one-on-one mentorship and you may not know it right now but at this very moment you are sitting on a crossroad the decision you make right now could alter the course of your life you&#x27;ve seen the freedom that trading gives you and you&#x27;ve seen how it&#x27;s impacted my life Patrick&#x27;s life and the hundreds of traders that we&#x27;ve taught and you know that trading is real and it is possible to be profitable you&#x27;ve also seen how the college education system is dying and the mindset to work a corporate job is dying because for the first time in history people are realizing that you don&#x27;t need to wait to become 40 years old to make your first million you&#x27;ve seen how what people have preached to be sustainable for the longest time is now considered a broke mindset because people who live a crazy successful life have crazy fucking ideas and they don&#x27;t think like the 99% they&#x27;re able to take their chances on the 1% so the choice is yours are you gonna continue down your</p><p><span class="ts">[00:10:10]</span> current path hating the position that you&#x27;re in or are you gonna take the leap are you gonna take the risk and work towards your dreams or are you gonna take the biggest risk of never taking that leap at all because if you never take the leap failure is guaranteed you&#x27;ll be stuck in the same exact position that you&#x27;re in right now this is your last chance to go down below this video click the button to apply and we&#x27;ll see you inside the 1% welcome to the 1%</p></div></details></section>
+<footer>Captured 18 August 2026. Evidence in <code>~/UNDERGROUND_FUNNELS_SSOT</code>
+and <code>~/Downloads/Swipes/PB_TRADING_Swipe</code>. Built with the <code>/swipe</code> skill.<br>
+Competitor research. Not for redistribution.</footer></div>
+<div id="lb"><img alt=""><div class="cap"></div></div>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='IMG'&&e.target.closest('figure')){
+    var lb=document.getElementById('lb');
+    lb.querySelector('img').src=e.target.dataset.full||e.target.src;
+    var fc=e.target.closest('figure').querySelector('figcaption');
+    lb.querySelector('.cap').textContent=fc?fc.textContent.trim():'';
+    lb.style.display='flex';
+  } else if(e.target.closest('#lb')){document.getElementById('lb').style.display='none';}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')document.getElementById('lb').style.display='none';
+});
+function wireSearch(id,sel){
+  var b=document.getElementById(id); if(!b)return;
+  b.addEventListener('input',function(){
+    var q=b.value.toLowerCase();
+    document.querySelectorAll(sel).forEach(function(el){
+      el.style.display = !q || el.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  });
+}
+wireSearch('tsearch','details.tr');
+wireSearch('ssearch','figure.sl');
+</script></body></html>
